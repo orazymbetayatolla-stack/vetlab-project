@@ -1,0 +1,207 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}РВЛ{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/a11y.css' %}">
+</head>
+<body>
+
+<!-- ✅ A11Y: пропустить к содержимому -->
+<a class="skip-link" href="#mainContent">{% trans "Перейти к содержимому" %}</a>
+
+<div class="modal fade" id="a11yModal" tabindex="-1" aria-labelledby="a11yModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="a11yModalLabel">Настройки доступности</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="mb-3">
+          <label class="form-label">Размер текста</label>
+          <select class="form-select" id="a11yFontSize">
+            <option value="base">Обычный</option>
+            <option value="lg">Крупный</option>
+            <option value="xl">Очень крупный</option>
+          </select>
+        </div>
+
+        <div class="form-check form-switch mb-2">
+          <input class="form-check-input" type="checkbox" id="a11yContrast">
+          <label class="form-check-label" for="a11yContrast">Высокий контраст</label>
+        </div>
+
+        <div class="form-check form-switch mb-2">
+          <input class="form-check-input" type="checkbox" id="a11yUnderlineLinks">
+          <label class="form-check-label" for="a11yUnderlineLinks">Подчёркивать ссылки</label>
+        </div>
+
+        <div class="form-check form-switch mb-2">
+          <input class="form-check-input" type="checkbox" id="a11ySpacing">
+          <label class="form-check-label" for="a11ySpacing">Увеличить интервалы</label>
+        </div>
+
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="a11yReduceMotion">
+          <label class="form-check-label" for="a11yReduceMotion">Убрать анимации</label>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" id="a11yReset">Сбросить</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Готово</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center gap-2" href="{% url 'home' %}">
+            <img src="{% static 'images/logo.png' %}" alt="РВЛ" height="40">
+            <strong>{% trans "РВЛ" %}</strong>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">{% trans "Главная" %}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">{% trans "О лаборатории" %}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'structure' %}">{% trans "Структура" %}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'services' %}">{% trans "Услуги" %}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'news' %}">{% trans "Новости" %}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'documents' %}">{% trans "Нормативные акты" %}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contacts' %}">{% trans "Контакты" %}</a>
+                </li>
+
+            </ul>
+
+            <!-- 🌍 язык -->
+            <form action="{% url 'set_language' %}" method="post" class="lang-form">
+              {% csrf_token %}
+              <input type="hidden" name="next" value="{{ request.get_full_path }}">
+
+              {% get_current_language as CURRENT_LANG %}
+              {% get_available_languages as LANGUAGES %}
+
+              <select name="language" onchange="this.form.submit()" class="lang-select">
+                {% for lang in LANGUAGES %}
+                  <option value="{{ lang.0 }}" {% if lang.0 == CURRENT_LANG %}selected{% endif %}>
+                    {{ lang.0|upper }}
+                  </option>
+                {% endfor %}
+              </select>
+            </form>
+
+            <!-- A11Y: Версия для слабовидящих -->
+            <button type="button"
+                    class="btn btn-outline-secondary btn-sm ms-2"
+                    id="a11yToggle"
+                    aria-pressed="false">
+                  {% trans "Версия для слабовидящих" %}
+            </button>
+
+            <button type="button"
+                    class="btn btn-outline-secondary btn-sm ms-2 d-none"
+                    id="a11ySettingsBtn">
+                 {% trans "Настройки" %}
+            </button>
+
+        </div>
+    </div>
+</nav>
+
+<!-- ✅ A11Y: main с id для skip-link -->
+<main id="mainContent" class="container my-4">
+    {% block content %}{% endblock %}
+</main>
+
+<!-- ✅ НОРМАЛЬНЫЙ ФУТЕР -->
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <h5>{% trans "РВЛ" %}</h5>
+                <p class="footer-text">
+                    {% trans "РГП на ПХВ" %}<br>
+                    {% trans "«Республиканская ветеринарная лаборатория»" %}
+                </p>
+            </div>
+
+            <div>
+                <h5>{% trans "Разделы" %}</h5>
+                <ul class="footer-links">
+                    <li><a href="{% url 'about' %}">{% trans "О лаборатории" %}</a></li>
+                    <li><a href="{% url 'structure' %}">{% trans "Структура" %}</a></li>
+                    <li><a href="{% url 'services' %}">{% trans "Услуги" %}</a></li>
+                    <li><a href="{% url 'news' %}">{% trans "Новости" %}</a></li>
+                    <li><a href="{% url 'documents' %}">{% trans "Нормативные акты" %}</a></li>
+                    <li><a href="{% url 'contacts' %}">{% trans "Контакты" %}</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5>{% trans "Контакты" %}</h5>
+                <p class="footer-text">
+                    {% trans "Казахстан" %}<br>
+                    {% trans "Телефон:" %} +7 (___) ___-__-__<br>
+                    {% trans "Email:" %} info@vetlab.kz
+                </p>
+
+                <ul class="footer-links">
+                    <li><a href="#">{% trans "Политика конфиденциальности" %}</a></li>
+                    <li><a href="#">{% trans "Пользовательское соглашение" %}</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 {% trans "РГП на ПХВ «Республиканская ветеринарная лаборатория»" %}
+        </div>
+
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="{% static 'js/a11y.js' %}"></script>
+
+</body>
+</html>

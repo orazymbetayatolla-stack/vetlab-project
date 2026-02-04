@@ -1,0 +1,141 @@
+/* Базовые вещи, полезные всегда */
+:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 10px 12px;
+  z-index: 9999;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+}
+
+/* ВКЛ: режим слабовидящих */
+body.a11y-on {
+  font-family: Arial, sans-serif;
+}
+
+/* Размер текста */
+body.a11y-font-lg { font-size: 18px; }
+body.a11y-font-xl { font-size: 20px; }
+
+/* Интервалы */
+body.a11y-spacing {
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+}
+body.a11y-spacing p { margin-bottom: 1rem; }
+
+/* Подчеркивание ссылок */
+body.a11y-underline a {
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+/* =========================
+   Высокий контраст (FIX)
+   ========================= */
+body.a11y-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* ✅ ВАЖНО: секции у тебя имеют светлый background в основном CSS — делаем их темными */
+body.a11y-contrast .hero,
+body.a11y-contrast .directions,
+body.a11y-contrast .about-block,
+body.a11y-contrast .help-to--list,
+body.a11y-contrast section,
+body.a11y-contrast main {
+  background: #000 !important;
+}
+
+/* Навбар / футер / модалки — темные */
+body.a11y-contrast .navbar,
+body.a11y-contrast footer,
+body.a11y-contrast .modal-content {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+/* ✅ Заголовки/подзаголовки на темном фоне — белые */
+body.a11y-contrast h1,
+body.a11y-contrast h2,
+body.a11y-contrast h3,
+body.a11y-contrast h4,
+body.a11y-contrast h5,
+body.a11y-contrast h6,
+body.a11y-contrast .section-title,
+body.a11y-contrast .section-subtitle {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* ✅ Карточки/блоки: белые для читаемости */
+body.a11y-contrast .card,
+body.a11y-contrast .accordion-item,
+body.a11y-contrast .direction-card,
+body.a11y-contrast .help-item,
+body.a11y-contrast .stats div {
+  background: #fff !important;
+  color: #000 !important;
+  border-color: #000 !important;
+  box-shadow: none !important; /* в а11y тени часто мешают */
+}
+
+/* ✅ Текст внутри карточек — черный (чтобы ничего не пропадало) */
+body.a11y-contrast .card *,
+body.a11y-contrast .accordion-item *,
+body.a11y-contrast .direction-card *,
+body.a11y-contrast .help-item *,
+body.a11y-contrast .stats div * {
+  color: #000 !important;
+  opacity: 1 !important;
+}
+
+/* ✅ Любой "серый" текст на темном фоне делаем белым */
+body.a11y-contrast p,
+body.a11y-contrast span,
+body.a11y-contrast li,
+body.a11y-contrast small {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* Ссылки / кнопки */
+body.a11y-contrast a { color: #ffd000 !important; }
+body.a11y-contrast .btn-warning { background: #ffd000 !important; color: #000 !important; }
+body.a11y-contrast .btn-outline-warning { border-color: #ffd000 !important; color: #ffd000 !important; }
+
+/* Убираем “картинки-фоны”, если мешают читабельности */
+body.a11y-contrast .hero,
+body.a11y-contrast .hero-overlay {
+  background: #000 !important;
+}
+body.a11y-contrast .hero-overlay { display: none !important; }
+
+/* ✅ HERO текст: без теней, чтобы не "мылось" */
+body.a11y-contrast .hero h1,
+body.a11y-contrast .hero p {
+  color: #fff !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+/* Отключение анимаций */
+body.a11y-reduce-motion *,
+body.a11y-reduce-motion *::before,
+body.a11y-reduce-motion *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}

@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Новости" %}{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">{% trans "Новости и объявления" %}</h2>
+
+<div class="row">
+    {% for n in news_list %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            {% if n.image %}
+            <img src="{{ n.image.url }}" class="card-img-top" alt="{{ n.title }}">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ n.title }}</h5>
+                <p class="card-text">{{ n.short_text }}</p>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p class="text-muted">{% trans "Новостей пока нет" %}</p>
+    {% endfor %}
+</div>
+{% endblock %}
+
+

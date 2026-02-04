@@ -1,0 +1,315 @@
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f6f9fc;
+    color: #1f2d3d;
+}
+
+.navbar {
+    background: #ffffff !important;
+}
+
+/* ===== HERO ===== */
+.hero{
+    position: relative;
+    min-height: 520px;                 /* было 420 — на мобиле мало */
+    background: url("/static/images/hero-bg.jpg") center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;                   /* чтобы не резало сверху/снизу */
+}
+
+@media (max-width: 768px){
+  .hero{
+    min-height: 620px;                 /* чтобы влезал заголовок */
+    background-position: center top;   /* показываем верх картинки */
+  }
+}
+
+
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 520px;
+    color: #4a6073;
+}
+
+.hero-logo {
+    max-width: 320px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.15);
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/* ===== DIRECTIONS ===== */
+.directions {
+    padding: 80px 0;
+    background: #f8fbff;
+}
+
+.direction-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px 25px;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.direction-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.direction-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+}
+
+.direction-card h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.direction-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ===== ABOUT ===== */
+.about-block {
+    padding: 90px 0;
+    background: #ffffff;
+}
+
+.about-block h2 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.stats div {
+    background: #f1f5f9;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stats strong {
+    font-size: 24px;
+}
+
+.stats span {
+    font-size: 13px;
+    color: #555;
+}
+
+.about-image {
+    max-width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.15);
+}
+
+.hero h1,
+.hero p {
+    color: #0f172a;            /* тёмный текст */
+    text-shadow: 0 2px 6px rgba(255,255,255,0.9);
+}
+
+.site-footer{
+    background: #22B8C7;      /* твой бирюзовый */
+    color: #ffffff;
+    padding: 70px 0 40px;     /* ↑ больше воздуха */
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;                /* расстояние между колонками */
+    align-items: start;
+}
+
+.site-footer h5{
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+
+.footer-text{
+    color: rgba(255,255,255,0.95);
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.footer-links{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li{
+    margin: 10px 0;
+}
+
+.site-footer a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.site-footer a:hover{
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+.footer-bottom{
+    margin-top: 50px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.35);
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+}
+
+/* 📱 адаптив */
+@media (max-width: 992px){
+    .footer-grid{
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    border: 1px solid #dbe7ef;
+    background: #eaf7f7;
+    border-radius: 10px;
+    padding: 12px 14px;
+    outline: none;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    border-color: rgba(0,0,0,0.2);
+    background: #ffffff;
+}
+
+.lang-form { margin-left: 12px; }
+
+.lang-select{
+  background:#fff;
+  border:1px solid #e0e0e0;
+  border-radius:8px;
+  padding:6px 12px;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.lang-select:hover{ border-color:#f4b400; }
+.lang-select:focus{
+  outline:none;
+  box-shadow:0 0 0 2px rgba(244,180,0,.25);
+}
+
+/* === КОМУ МЫ ПОМОГАЕМ (СПИСОК) === */
+.help-to--list{
+  padding: 70px 0;
+  background: #f6f9fc;
+}
+
+.section-title{
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.section-subtitle{
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 35px auto;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* вертикальный список */
+.help-list{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.help-item{
+  display: flex;
+  gap: 22px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.help-item__icon{
+  flex: 0 0 96px;
+  height: 96px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(11, 184, 197, 0.10);
+}
+
+.help-item__content h3{
+  margin: 2px 0 10px 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.help-item__content p{
+  margin: 0 0 8px 0;
+  color: #6b7280;
+  line-height: 1.65;
+  font-size: 15px;
+}
+.help-item__content p:last-child{ margin-bottom: 0; }
+
+@media (max-width: 768px){
+  .help-item{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .help-item__icon{
+    width: 96px;
+  }
+}
+
+
+

@@ -1,0 +1,426 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Главная" %}{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1>{% trans "Республиканская ветеринарная лаборатория" %}</h1>
+
+                <p>
+                    {% trans "Центральная ветеринарная лаборатория Республики Казахстан" %}
+                </p>
+
+                <a href="{% url 'about' %}" class="btn btn-warning">
+                    {% trans "О лаборатории" %}
+                </a>
+            </div>
+
+            <div class="col-lg-5 text-end d-none d-lg-block">
+                <img src="{% static 'images/logo.png' %}" class="hero-logo" alt="РВЛ">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="directions">
+    <div class="container">
+        <h2 class="section-title">{% trans "Основные направления" %}</h2>
+
+        <div class="row g-4 text-center">
+
+            <div class="col-md-6 col-lg-3">
+                <div class="direction-card">
+                    <img src="{% static 'icons/diagnostics.svg' %}" class="direction-icon" alt="">
+                    <h5>{% trans "Лабораторная диагностика" %}</h5>
+                    <p>{% trans "Диагностика и анализ ветеринарных заболеваний" %}</p>
+                    <a href="{% url 'service_diagnostics' %}" class="btn btn-outline-warning">
+                        {% trans "Подробнее" %}
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="direction-card">
+                    <img src="{% static 'icons/structure.svg' %}" class="direction-icon" alt="">
+                    <h5>{% trans "Структура и филиалы" %}</h5>
+                    <p>{% trans "Филиальная сеть по всей Республике Казахстан" %}</p>
+                    <a href="{% url 'structure' %}" class="btn btn-outline-warning">
+                        {% trans "Подробнее" %}
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="direction-card">
+                    <img src="{% static 'icons/training.svg' %}" class="direction-icon" alt="">
+                    <h5>{% trans "Учебный центр" %}</h5>
+                    <p>{% trans "Повышение квалификации специалистов" %}</p>
+                    <a href="{% url 'service_training' %}" class="btn btn-outline-warning">
+                        {% trans "Подробнее" %}
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="direction-card">
+                    <img src="{% static 'icons/documents.svg' %}" class="direction-icon" alt="">
+                    <h5>{% trans "Нормативные акты" %}</h5>
+                    <p>{% trans "Методические и правовые документы" %}</p>
+                    <a href="{% url 'documents' %}" class="btn btn-outline-warning">
+                        {% trans "Подробнее" %}
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="about-block">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <h2>{% trans "О нас" %}</h2>
+                <p>
+
+                    {% trans "Республиканская ветеринарная лаборатория — ведущее государственное учреждение Республики Казахстан в сфере ветеринарной диагностики и биологической безопасности. Лаборатория осуществляет диагностику заболеваний животных, контроль эпизоотической ситуации и обеспечивает ветеринарно-санитарную безопасность страны." %}
+
+
+                </p>
+
+                <div class="stats">
+                    <div>
+                        <strong>23</strong>
+                        <span>{% trans "года работы" %}</span>
+                    </div>
+                    <div>
+                        <strong>20</strong>
+                        <span>{% trans "филиалов" %}</span>
+                    </div>
+                    <div>
+                        <strong>3500+</strong>
+                        <span>{% trans "исследований в день" %}</span>
+                    </div>
+                </div>
+
+                <a href="{% url 'about' %}" class="btn btn-warning mt-3">
+                    {% trans "Подробнее о лаборатории" %}
+                </a>
+            </div>
+
+            <div class="col-lg-6 text-center">
+                <img src="{% static 'images/about.jpg' %}" class="about-image" alt="{% trans 'О нас' %}">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="help-to help-to--list">
+  <div class="container">
+
+    <h2 class="section-title">
+      {% trans "Кому мы помогаем" %}
+    </h2>
+
+    <p class="section-subtitle">
+
+      {% trans "Поддерживаем ветеринарную безопасность страны и помогаем всем участникам отрасли — от граждан до организаций." %}
+
+    </p>
+
+    <div class="help-list">
+
+      <!-- Гражданам -->
+      <div class="help-item">
+        <div class="help-item__icon">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="20" r="8" stroke="#1F2A37" stroke-width="2.2"/>
+  <path d="M16 52c2.5-11 11-17 16-17s13.5 6 16 17" stroke="#1F2A37" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="46" cy="18" r="6" stroke="#0BB8C5" stroke-width="2.2"/>
+  <path d="M46 15v6M43 18h6" stroke="#0BB8C5" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
+
+        </div>
+        <div class="help-item__content">
+          <h3>{% trans "Гражданам" %}</h3>
+          <p>
+
+            {% trans "Понятная информация о работе лаборатории, порядке обращения и типовых вопросах." %}
+          </p>
+          <p>
+
+            {% trans "Консультации по направлениям исследований и правилам подготовки материалов." %}
+
+          </p>
+        </div>
+      </div>
+
+      <!-- Фермерам -->
+      <div class="help-item">
+        <div class="help-item__icon">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- стебель -->
+  <path d="M32 52V16" stroke="#0BB8C5" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- листья/зёрна слева -->
+  <path d="M32 20c-6 1-9 5-9 9 6-1 9-5 9-9Z" stroke="#1F2A37" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M32 28c-6 1-9 5-9 9 6-1 9-5 9-9Z" stroke="#1F2A37" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M32 36c-6 1-9 5-9 9 6-1 9-5 9-9Z" stroke="#1F2A37" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- листья/зёрна справа -->
+  <path d="M32 20c6 1 9 5 9 9-6-1-9-5-9-9Z" stroke="#1F2A37" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M32 28c6 1 9 5 9 9-6-1-9-5-9-9Z" stroke="#1F2A37" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M32 36c6 1 9 5 9 9-6-1-9-5-9-9Z" stroke="#1F2A37" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- акцент -->
+  <circle cx="32" cy="14" r="2.2" fill="#0BB8C5"/>
+</svg>
+
+        </div>
+        <div class="help-item__content">
+          <h3>{% trans "Фермерам" %}</h3>
+          <p>
+
+            {% trans "Диагностика заболеваний животных, рекомендации по профилактике и биобезопасности." %}
+
+          </p>
+          <p>
+
+            {% trans "Поддержка при эпизоотических рисках и контроль ветеринарного благополучия." %}
+
+          </p>
+        </div>
+      </div>
+
+      <!-- Организациям -->
+      <div class="help-item">
+        <div class="help-item__icon">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="18" y="16" width="28" height="36" rx="2" stroke="#1F2A37" stroke-width="2.2"/>
+  <path d="M26 24h4M26 32h4M26 40h4M34 24h4M34 32h4M34 40h4" stroke="#1F2A37" stroke-width="2.2"/>
+  <circle cx="46" cy="18" r="6" stroke="#0BB8C5" stroke-width="2.2"/>
+  <path d="M43 18l2 2 4-4" stroke="#0BB8C5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+
+        </div>
+        <div class="help-item__content">
+          <h3>{% trans "Организациям" %}</h3>
+          <p>
+
+            {% trans "Проведение исследований по заявкам предприятий и сопровождение контроля качества продукции."%}
+
+          </p>
+          <p>
+
+            {% trans "Методическая поддержка по вопросам биобезопасности и санитарного контроля." %}
+          </p>
+        </div>
+      </div>
+
+      <!-- Ветспециалистам -->
+      <div class="help-item">
+        <div class="help-item__icon">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- ушные оливы -->
+  <path d="M22 18v10" stroke="#1F2A37" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M42 18v10" stroke="#1F2A37" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="22" cy="16" r="3" stroke="#0BB8C5" stroke-width="2.2"/>
+  <circle cx="42" cy="16" r="3" stroke="#0BB8C5" stroke-width="2.2"/>
+
+  <!-- дуга стетоскопа -->
+  <path d="M22 28c0 10 6 16 10 16s10-6 10-16" stroke="#1F2A37" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- трубка вниз -->
+  <path d="M32 44v6c0 4 3 6 6 6h6" stroke="#1F2A37" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- мембрана -->
+  <circle cx="52" cy="56" r="5" stroke="#0BB8C5" stroke-width="2.2"/>
+  <path d="M52 53v6M49 56h6" stroke="#0BB8C5" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
+
+        </div>
+        <div class="help-item__content">
+          <h3>{% trans "Ветспециалистам" %}</h3>
+          <p>
+
+            {% trans "Учебно-методическая поддержка, повышение квалификации и обмен практиками." %}
+
+          </p>
+          <p>
+
+            {% trans "Доступ к нормативным материалам и современным подходам лабораторной диагностики." %}
+
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="container my-5">
+    <h2 class="section-title text-center mb-4">{% trans "Наши услуги" %}</h2>
+
+    <div class="row g-4">
+        <div class="col-md-3">
+            <div class="card card-gov p-4 text-center h-100">
+                <i class="bi bi-flask fs-1 text-warning"></i>
+                <h5 class="mt-3">{% trans "Диагностические исследования" %}</h5>
+                <p class="text-muted small">
+                    {% trans "Лабораторные исследования для обеспечения ветеринарной безопасности" %}
+                </p>
+                <a href="{% url 'service_diagnostics' %}" class="btn btn-outline-warning btn-sm mt-auto">
+                    {% trans "Подробнее" %}
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card card-gov p-4 text-center h-100">
+                <i class="bi bi-virus fs-1 text-warning"></i>
+                <h5 class="mt-3">{% trans "Молекулярные исследования" %}</h5>
+                <p class="text-muted small">
+                    {% trans "ПЦР и другие современные методы анализа" %}
+                </p>
+                <a href="{% url 'service_molecular' %}" class="btn btn-outline-warning btn-sm mt-auto">
+                    {% trans "Подробнее" %}
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card card-gov p-4 text-center h-100">
+                <i class="bi bi-globe fs-1 text-warning"></i>
+                <h5 class="mt-3">{% trans "Эпизоотический мониторинг" %}</h5>
+                <p class="text-muted small">
+                    {% trans "Анализ и контроль ветеринарной ситуации" %}
+                </p>
+                <a href="{% url 'service_monitoring' %}" class="btn btn-outline-warning btn-sm mt-auto">
+                    {% trans "Подробнее" %}
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card card-gov p-4 text-center h-100">
+                <i class="bi bi-mortarboard fs-1 text-warning"></i>
+                <h5 class="mt-3">{% trans "Учебно-методическая деятельность" %}</h5>
+                <p class="text-muted small">
+                    {% trans "Повышение квалификации специалистов" %}
+                </p>
+                <a href="{% url 'service_training' %}" class="btn btn-outline-warning btn-sm mt-auto">
+                    {% trans "Подробнее" %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="my-5">
+    <h2>{% trans "Новости и объявления" %}</h2>
+
+    {% if news %}
+        <div class="row">
+            {% for item in news %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        {% if item.image %}
+                            <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.title }}">
+                        {% endif %}
+
+                        <div class="card-body">
+                            <h5 class="card-title">{{ item.title }}</h5>
+                            <p class="card-text text-muted mt-2">
+                                {{ item.short_text|linebreaks|truncatechars:200 }}
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>{% trans "Новостей пока нет" %}</p>
+    {% endif %}
+</section>
+<section class="my-5">
+  <h2 class="mb-4">{% trans "Часто задаваемые вопросы" %}</h2>
+
+  <div class="accordion" id="faqAccordion">
+    {% for item in faq %}
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="h{{ forloop.counter }}">
+          <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#c{{ forloop.counter }}">
+            {{ item.q }}
+          </button>
+        </h2>
+
+        <div id="c{{ forloop.counter }}"
+             class="accordion-collapse collapse {% if forloop.first %}show{% endif %}"
+             data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            {{ item.a }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="my-5">
+  <h2 class="mb-3">{% trans "Остались вопросы?" %}</h2>
+  <p class="text-muted">{% trans "*Поля обязательны для заполнения" %}</p>
+
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+
+  <form method="post" class="feedback-form">
+    {% csrf_token %}
+
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label">{% trans "Имя" %} *</label>
+        {{ feedback_form.first_name }}
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">{% trans "Фамилия" %} *</label>
+        {{ feedback_form.last_name }}
+      </div>
+
+      <div class="col-md-12">
+        <label class="form-label">E-mail *</label>
+        {{ feedback_form.email }}
+      </div>
+
+      <div class="col-md-12">
+        <label class="form-label">{% trans "Задайте вопрос" %} *</label>
+        {{ feedback_form.message }}
+      </div>
+    </div>
+
+    <div class="mt-3 small text-muted">
+      {% trans "Заполняя форму, вы соглашаетесь с политикой конфиденциальности." %}
+    </div>
+
+    <button class="btn btn-dark mt-3" type="submit">
+      {% trans "Отправить сообщение" %}
+    </button>
+  </form>
+</section>
+
+{% endblock %}

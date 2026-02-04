@@ -1,0 +1,392 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-04 11:37+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\main\templates\main\about.html:4 .\main\templates\main\about.html:8
+#: .\main\templates\main\base.html:88 .\main\templates\main\base.html:170
+#: .\main\templates\main\home.html:22
+msgid "О лаборатории"
+msgstr "About the laboratory"
+
+#: .\main\templates\main\about.html:9 .\main\templates\main\contacts.html:9
+#: .\main\templates\main\services.html:9 .\main\templates\main\structure.html:9
+msgid "Страница в разработке"
+msgstr "Page under construction"
+
+#: .\main\templates\main\base.html:18
+msgid "Перейти к содержимому"
+msgstr "Skip to content"
+
+#: .\main\templates\main\base.html:73 .\main\templates\main\base.html:160
+msgid "РВЛ"
+msgstr "RVL"
+
+#: .\main\templates\main\base.html:84 .\main\templates\main\home.html:5
+msgid "Главная"
+msgstr "Home"
+
+#: .\main\templates\main\base.html:92 .\main\templates\main\base.html:171
+#: .\main\templates\main\structure.html:4
+msgid "Структура"
+msgstr "Structure"
+
+#: .\main\templates\main\base.html:96 .\main\templates\main\base.html:172
+#: .\main\templates\main\services.html:4 .\main\templates\main\services.html:8
+msgid "Услуги"
+msgstr "Services"
+
+#: .\main\templates\main\base.html:100 .\main\templates\main\base.html:173
+#: .\main\templates\main\news.html:4
+msgid "Новости"
+msgstr "News"
+
+#: .\main\templates\main\base.html:104 .\main\templates\main\base.html:174
+#: .\main\templates\main\documents.html:4
+#: .\main\templates\main\documents.html:8 .\main\templates\main\home.html:75
+msgid "Нормативные акты"
+msgstr "Regulatory acts"
+
+#: .\main\templates\main\base.html:108 .\main\templates\main\base.html:175
+#: .\main\templates\main\base.html:180 .\main\templates\main\contacts.html:4
+#: .\main\templates\main\contacts.html:8
+msgid "Контакты"
+msgstr "Contacts"
+
+#: .\main\templates\main\base.html:162
+msgid "РГП на ПХВ"
+msgstr "RSE on the REM"
+
+#: .\main\templates\main\base.html:163
+msgid "«Республиканская ветеринарная лаборатория»"
+msgstr "Republican Veterinary Laboratory"
+
+#: .\main\templates\main\base.html:168
+msgid "Разделы"
+msgstr "Sections"
+
+#: .\main\templates\main\base.html:182
+msgid "Казахстан"
+msgstr "Kazakhstan"
+
+#: .\main\templates\main\base.html:183
+msgid "Телефон:"
+msgstr "Phone:"
+
+#: .\main\templates\main\base.html:184
+msgid "Email:"
+msgstr "Email:"
+
+#: .\main\templates\main\base.html:188
+msgid "Политика конфиденциальности"
+msgstr "Privacy Policy"
+
+#: .\main\templates\main\base.html:189
+msgid "Пользовательское соглашение"
+msgstr "User Agreement"
+
+#: .\main\templates\main\base.html:196
+msgid "РГП на ПХВ «Республиканская ветеринарная лаборатория»"
+msgstr "RSE on the REM “Republican Veterinary Laboratory"
+
+#: .\main\templates\main\documents.html:9
+msgid "Методические и правовые документы (в разработке)."
+msgstr "Methodological and legal documents (under development)."
+
+#: .\main\templates\main\home.html:15
+msgid "Республиканская ветеринарная лаборатория"
+msgstr "Republican Veterinary Laboratory"
+
+#: .\main\templates\main\home.html:18
+msgid "Центральная ветеринарная лаборатория Республики Казахстан"
+msgstr "Central Veterinary Laboratory of the Republic of Kazakhstan"
+
+#: .\main\templates\main\home.html:35
+msgid "Основные направления"
+msgstr "Main areas"
+
+#: .\main\templates\main\home.html:42
+msgid "Лабораторная диагностика"
+msgstr "Laboratory diagnostics"
+
+#: .\main\templates\main\home.html:43
+msgid "Диагностика и анализ ветеринарных заболеваний"
+msgstr "Diagnosis and analysis of veterinary diseases"
+
+#: .\main\templates\main\home.html:45 .\main\templates\main\home.html:56
+#: .\main\templates\main\home.html:67 .\main\templates\main\home.html:78
+#: .\main\templates\main\home.html:282 .\main\templates\main\home.html:295
+#: .\main\templates\main\home.html:308 .\main\templates\main\home.html:321
+msgid "Подробнее"
+msgstr "Learn more"
+
+#: .\main\templates\main\home.html:53 .\main\templates\main\structure.html:8
+msgid "Структура и филиалы"
+msgstr "Structure and branches"
+
+#: .\main\templates\main\home.html:54
+msgid "Филиальная сеть по всей Республике Казахстан"
+msgstr "Branch network across the Republic of Kazakhstan"
+
+#: .\main\templates\main\home.html:64
+msgid "Учебный центр"
+msgstr "Training center"
+
+#: .\main\templates\main\home.html:65 .\main\templates\main\home.html:318
+msgid "Повышение квалификации специалистов"
+msgstr "Professional development of specialists"
+
+#: .\main\templates\main\home.html:76
+msgid "Методические и правовые документы"
+msgstr "Methodological and legal documents"
+
+#: .\main\templates\main\home.html:91 .\main\templates\main\home.html:119
+msgid "О нас"
+msgstr "About us"
+
+#: .\main\templates\main\home.html:93
+msgid "Республиканская ветеринарная лаборатория — ведущее государственное учреждение Республики Казахстан в сфере ветеринарной диагностики и биологической безопасности. Лаборатория осуществляет диагностику заболеваний животных, контроль эпизоотической ситуации и обеспечивает ветеринарно-санитарную безопасность страны."
+msgstr "The Republican Veterinary Laboratory is the leading state institution in the Republic of Kazakhstan in the field of veterinary diagnostics and biological safety. The laboratory diagnoses animal diseases, monitors epizootic situations, and ensures the country's veterinary and sanitary security."
+
+
+#: .\main\templates\main\home.html:101
+msgid "года работы"
+msgstr "years of operation"
+
+#: .\main\templates\main\home.html:105
+msgid "филиалов"
+msgstr "branches"
+
+#: .\main\templates\main\home.html:109
+msgid "исследований в день"
+msgstr "tests per day"
+
+#: .\main\templates\main\home.html:114
+msgid "Подробнее о лаборатории"
+msgstr "About the laboratory"
+
+#: .\main\templates\main\home.html:129
+msgid "Кому мы помогаем"
+msgstr "Who we help"
+
+#: .\main\templates\main\home.html:133
+msgid "Поддерживаем ветеринарную безопасность страны и помогаем всем участникам отрасли — от граждан до организаций."
+msgstr "We support the country's veterinary security and assist all industry participants—from individuals to organizations."
+
+#: .\main\templates\main\home.html:152
+msgid "Гражданам"
+msgstr "To citizens"
+
+#: .\main\templates\main\home.html:154
+msgid "Понятная информация о работе лаборатории, порядке обращения и типовых вопросах."
+msgstr "Clear information about the laboratory's work, application procedures, and common questions."
+
+#: .\main\templates\main\home.html:159
+msgid "Консультации по направлениям исследований и правилам подготовки материалов."
+msgstr "Consultations on research areas and rules for preparing materials."
+
+#: .\main\templates\main\home.html:186
+msgid "Фермерам"
+msgstr "For farmers"
+
+#: .\main\templates\main\home.html:188
+msgid "Диагностика заболеваний животных, рекомендации по профилактике и биобезопасности."
+msgstr "Diagnosis of animal diseases, recommendations for prevention and biosafety."
+
+#: .\main\templates\main\home.html:193
+msgid "Поддержка при эпизоотических рисках и контроль ветеринарного благополучия."
+msgstr "Support in case of epizootic risks and control of veterinary welfare."
+
+#: .\main\templates\main\home.html:213
+msgid "Организациям"
+msgstr "Organizations"
+
+#: .\main\templates\main\home.html:215
+msgid "Проведение исследований по заявкам предприятий и сопровождение контроля качества продукции."
+msgstr "Conducting research based on requests from enterprises and supporting product quality control."
+
+#: .\main\templates\main\home.html:220
+msgid "Методическая поддержка по вопросам биобезопасности и санитарного контроля."
+msgstr "Methodological support on biosafety and sanitary control issues."
+
+#: .\main\templates\main\home.html:250
+msgid "Ветспециалистам"
+msgstr "Veterinary specialists"
+
+#: .\main\templates\main\home.html:252
+msgid "Учебно-методическая поддержка, повышение квалификации и обмен практиками."
+msgstr "Educational and methodological support, advanced training and exchange of practices."
+
+#: .\main\templates\main\home.html:257
+msgid "Доступ к нормативным материалам и современным подходам лабораторной диагностики."
+msgstr "Access to regulatory materials and modern approaches to laboratory diagnostics."
+
+#: .\main\templates\main\home.html:271
+msgid "Наши услуги"
+msgstr "Our services"
+
+#: .\main\templates\main\home.html:277 .\main\views.py:64
+msgid "Диагностические исследования"
+msgstr "Diagnostic studies"
+
+#: .\main\templates\main\home.html:279
+msgid "Лабораторные исследования для обеспечения ветеринарной безопасности"
+msgstr "Laboratory studies to ensure veterinary safety"
+
+#: .\main\templates\main\home.html:290 .\main\views.py:71
+msgid "Молекулярные исследования"
+msgstr "Molecular studies"
+
+#: .\main\templates\main\home.html:292
+msgid "ПЦР и другие современные методы анализа"
+msgstr "PCR and other modern analysis methods"
+
+#: .\main\templates\main\home.html:303 .\main\views.py:78
+msgid "Эпизоотический мониторинг"
+msgstr "Epizootic monitoring"
+
+#: .\main\templates\main\home.html:305
+msgid "Анализ и контроль ветеринарной ситуации"
+msgstr "Analysis and control of the veterinary situation"
+
+#: .\main\templates\main\home.html:316 .\main\views.py:85
+msgid "Учебно-методическая деятельность"
+msgstr "Educational and methodological activities"
+
+#: .\main\templates\main\home.html:329 .\main\templates\main\news.html:7
+msgid "Новости и объявления"
+msgstr "News and announcements"
+
+#: .\main\templates\main\home.html:352 .\main\templates\main\news.html:23
+msgid "Новостей пока нет"
+msgstr "No news yet"
+
+#: .\main\templates\main\home.html:356
+msgid "Часто задаваемые вопросы"
+msgstr "Frequently asked questions"
+
+#: .\main\templates\main\home.html:383
+msgid "Остались вопросы?"
+msgstr "Have questions?"
+
+#: .\main\templates\main\home.html:384
+msgid "*Поля обязательны для заполнения"
+msgstr "*Fields are required"
+
+#: .\main\templates\main\home.html:397
+msgid "Имя"
+msgstr "First name"
+
+#: .\main\templates\main\home.html:402
+msgid "Фамилия"
+msgstr "Last name"
+
+#: .\main\templates\main\home.html:412
+msgid "Задайте вопрос"
+msgstr "Ask a question"
+
+#: .\main\templates\main\home.html:418
+msgid "Заполняя форму, вы соглашаетесь с политикой конфиденциальности."
+msgstr "By filling out the form, you agree to the privacy policy."
+
+#: .\main\templates\main\home.html:422
+msgid "Отправить сообщение"
+msgstr "Send message"
+
+#: .\main\templates\main\service_page.html:12
+msgid "Назад к услугам"
+msgstr "Back to services"
+
+#: .\main\views.py:11
+msgid "Работает ли ваша служба в моём городе?"
+msgstr "Does your service operate in my city?"
+
+#: .\main\views.py:12
+msgid ""
+"Да. Уточните ваш город в форме ниже — мы ответим и подскажем ближайший "
+"филиал."
+msgstr ""
+"Yes. Please specify your city in the form below — we will respond and "
+"suggest the nearest branch."
+
+#: .\main\views.py:13
+msgid "Вы проводите исследования по заявкам организаций?"
+msgstr "Do you conduct studies based on requests from organizations?"
+
+#: .\main\views.py:14
+msgid ""
+"Да. Принимаем заявки от организаций и госструктур. Условия уточняются по "
+"контактам."
+msgstr ""
+"Yes. We accept requests from organizations and government bodies. Conditions "
+"are clarified via contacts."
+
+#: .\main\views.py:15
+msgid "Какие сроки выполнения исследований?"
+msgstr "What are the timelines for conducting studies?"
+
+#: .\main\views.py:16
+msgid "Сроки зависят от вида исследования. Обычно от 1 до 7 рабочих дней."
+msgstr ""
+"The timelines depend on the type of study. Usually from 1 to 7 working days."
+
+#: .\main\views.py:17
+msgid "Как получить консультацию?"
+msgstr "How can I get a consultation?"
+
+#: .\main\views.py:18
+msgid "Оставьте вопрос в форме обратной связи — мы свяжемся с вами."
+msgstr "Leave a question in the feedback form — we will contact you."
+
+#: .\main\views.py:25
+msgid "Спасибо! Ваше сообщение отправлено."
+msgstr "Thank you! Your message has been sent."
+
+#: .\main\views.py:65
+msgid "Лабораторные исследования для обеспечения ветеринарной безопасности."
+msgstr "Laboratory studies to ensure veterinary safety."
+
+#: .\main\views.py:72
+msgid "ПЦР и другие современные методы анализа."
+msgstr "PCR and other modern analysis methods."
+
+#: .\main\views.py:79
+#, fuzzy
+#| msgid "Республиканская ветеринарная лаборатория"
+msgid "Анализ и контроль ветеринарной ситуации."
+msgstr "Republican Veterinary Laboratory"
+
+#: .\main\views.py:86
+msgid "Повышение квалификации специалистов."
+msgstr "Professional development of specialists."
+
+#~ msgid "Русский"
+#~ msgstr "Russian"
+
+#~ msgid "Қазақша"
+#~ msgstr "Kazakh"
+
+#~ msgid "English"
+#~ msgstr "English"
+
+
+msgid "Настройки"
+msgstr "Settings"
+
+msgid "Версия для слабовидящих"
+msgstr "Version for the visually impaired"
